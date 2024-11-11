@@ -1,0 +1,240 @@
+
+/* FONTS */
+/* MAVEN PRO */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* OPENS SANS */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* DEFAULT SETTINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* COLORS */
+:root {
+    --primary-bg-color: #0A846E;
+    --secondary-bg-color: #9e6d52;
+    --body-bg-color: #FCF6FC;
+
+    --primary-text-color: #055647;
+}
+
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER SECTION */
+.hero {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(00px, 1fr));
+    grid-template-rows: 2, 1fr;
+}
+
+/* LEFT HERO CONTAINER */
+.hero-big-img {
+    grid-column: 1;
+    grid-row: span 2;
+    background-image: url("https://images.unsplash.com/photo-1615671524701-9c3dde8fdaa0?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-big-img-heart {
+    padding-top: 5rem;
+}
+
+/* RIGHT TOP HERO CONTAINER */
+.hero-small-brown {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 100%;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RIGHT BOTTOM HERO CONTAINER */
+.hero-small-green {
+    grid-column: 2;
+    grid-row: 2;
+    max-width:100%;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+.navigation-list {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    font-family: "Maven pro";
+    font-size: 1.25rem;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    box-shadow: 4 4 4 1;
+    background-color: #fff;
+}
+
+/* MAIN SECTION */
+main {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--primary-bg-color);
+    font-family: "Maven pro";
+}
+
+/* PLANNED TIPS SECTION */
+.planned-tips-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.tips-section-img {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.season-article {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0 5rem 3rem;
+    gap: 1.5rem;
+    font-family: "Open sans";
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .season-article p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .tips-btn {
+        border: none;
+        align-self: flex-end;
+        width: 35%;
+        padding: 1rem 2rem;
+        background-color: var(--primary-bg-color);
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 9px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* HORISONTELLA SKILJELINJE */
+hr {
+    border: 1px solid var(--primary-text-color);
+    width: 33%;
+    margin: 2rem 0;
+}
+
+/* PLANT GALLERY SECTION */
+.plant-gallery-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.gallery-card-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+}
+
+
+.seed-cards {
+    grid-column: span 1;
+}
+
+
+
+/* PLANTERADE PLANTOR SECTION */
+.planterade-plantor-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.planterade-plantor-article {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    gap: 1.5rem;
+    font-family: "Open sans";
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .planterade-plantor-article p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .planterade-plantor-btn {
+        border: none;
+        align-self: flex-start;
+        width: 50%;
+        padding: 1rem 2rem;
+        background-color: var(--primary-bg-color);
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 9px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.planterade-plantor-img {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
