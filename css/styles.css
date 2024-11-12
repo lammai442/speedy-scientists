@@ -20,11 +20,19 @@
     --body-bg-color: #FCF6FC;
 
     --primary-text-color: #055647;
-}
 
+
+/* Skapat variabel för font-family */ 
+
+--primary-font-fam: "Maven Pro";  
+
+--secondary-font-fam: "Open Sans"; 
+
+}
 
 body {
     background-color: var(--body-bg-color);
+    line-height: 1.25rem; 
 }
 
 .wrapper {
@@ -185,7 +193,6 @@ hr {
     row-gap: 1.5rem;
 }
 
-
 .seed-cards {
     grid-column: span 1;
 }
@@ -238,3 +245,319 @@ hr {
     border-radius: 50%;
     aspect-ratio: 1;
 }
+
+
+
+/* PROFILE PAGE */
+
+.wrapper-profile { 
+
+    max-width: 1000px; 
+    
+    margin: 0 auto; 
+    
+    } 
+      
+     
+    
+    /* Menu är en kopia kod från index sida */ 
+    
+    .navigation-list { 
+    
+    padding: 1rem 0; 
+    
+    display: flex; 
+    
+    flex-direction: row; 
+    
+    justify-content: space-around; 
+    
+    list-style-type: none; 
+    
+    font-family: "Maven pro"; 
+    
+    font-size: 1.25rem; 
+    
+    color: var(--primary-text-color); 
+    
+    font-weight: 500; 
+    
+    box-shadow: 4 4 4 1; 
+    
+    background-color: #fff; 
+    
+    position: sticky; 
+    
+    } 
+    
+    .profile-header { 
+    
+    background-image: url(assets/images.jpg); 
+    
+    max-width: 100%; 
+    
+    height: 379px; 
+    
+    background-size: cover; 
+    
+    background-position: center; 
+    
+    background-repeat: no-repeat; 
+    
+    display: flex; 
+    
+    flex-direction: column; 
+    
+    align-items: center; 
+    
+    justify-content: center;
+   
+     
+    
+    img { 
+    
+    width: 190px; 
+    
+    height: 186px; 
+    
+    } 
+    
+    h2 { 
+    
+    font-family: var(--primary-font-fam); 
+    
+    font-size: 40px; 
+    
+    font-weight: 500; 
+    
+    color: #ffffff; 
+    
+    } 
+    
+    } 
+    
+    .add-plant { 
+    
+    display: grid; 
+    
+    gap: 2rem; 
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    
+    grid-auto-rows: auto; 
+    
+    padding: 3rem 2rem; 
+    
+    background-color: antiquewhite; 
+    
+     
+    
+    h3 { 
+    
+    grid-row: 1; 
+    
+    font-family: var(--secondary-font-fam); 
+    
+    font-size: 36px; 
+    
+    font-weight: 400; 
+    
+    line-height: 2.5rem; 
+    
+    color: #000000; 
+    
+    } 
+    
+    input { 
+    
+    grid-row: 2; 
+    
+    } 
+    
+    #planta, #datum { 
+    
+    margin: 1rem 0; 
+    
+    height: 3rem; 
+    
+    border: 3px; 
+    
+    color: #060606; 
+    
+    } 
+    
+     
+    
+    } 
+    
+     
+    
+    /* En klass element för button */ 
+    
+    .add-extra { 
+    
+    grid-area: 3 / 2; 
+    
+    } 
+    
+     
+    
+    /* Button för LÄGGA TILL */ 
+    
+    button { 
+    
+    background-color: var(--primary-bg-color); 
+    
+    display: flex; 
+    
+    flex-direction: column; 
+    
+    justify-content: center; 
+    
+    align-items: center; 
+    
+    width: 192px; 
+    
+    height: 63px; 
+    
+    border: none; 
+    
+    border-radius: 9px; 
+    
+    font-family: var(--primary-font-fam); 
+    
+    color: #ffffff; 
+    
+    font-size:24px; 
+    
+    font-style: normal; 
+    
+    font-weight: 600; 
+    
+     
+    
+    } 
+    
+    .planerade { 
+    
+    width: 100%; 
+    
+    display: flex; 
+    
+    flex-direction: column; 
+    
+    justify-content: center; 
+    
+    align-items: center; 
+    
+    gap: 1.5rem; 
+    
+    background-color: #80d6c6; 
+    
+     
+    
+    img { 
+    
+    margin: 1rem; 
+    
+    } 
+    
+     
+    
+    h3 { 
+    
+    color: #ffffff; 
+    
+    font-family: var(--primary-font-fam); 
+    
+    padding: 1rem; 
+    
+    } 
+    
+    } 
+    
+    .planterade { 
+    
+    width: 100%; 
+    
+    display: flex;  
+    
+    flex-direction: column; 
+    
+    justify-content: center; 
+    
+    align-items: center; 
+    
+    gap: 1.5rem; 
+    
+    background-color: #0A846E; 
+    
+     
+    
+    img { 
+    
+    margin: 1rem; 
+    
+    } 
+    
+     
+    
+    h3 { 
+    
+    color: #ffffff; 
+    
+    font-family: var(--primary-font-fam); 
+    
+    text-align: center; 
+    
+    padding: 1rem; 
+    
+    } 
+    
+    } 
+    
+    .mina-bilder { 
+    
+    background-color: var(--secondary-bg-color); 
+    
+    display: grid; 
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    
+    grid-auto-rows: auto; 
+    
+    width: 100%; 
+    
+    height: 336px; 
+    
+    img { 
+    
+    display: flex; 
+    
+    width: 233px; 
+    
+    height: 267px; 
+    
+    padding: 1rem .5rem; 
+    
+    } 
+    
+    } 
+    
+    footer { 
+    
+    width: 100%; 
+    
+    height: 6rem; 
+    
+    background-color: whitesmoke; 
+    
+    text-align: center; 
+    
+    font-family: var(--secondary-font-fam); 
+    
+    color: var(--primary-text-color); 
+    
+    padding: 1.5rem; 
+    
+    } 
