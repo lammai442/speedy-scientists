@@ -6,11 +6,20 @@
 /* OPENS SANS */
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* LATO */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 /* DEFAULT SETTINGS */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+
+    a {
+        color: var(--primary-text-color);
+    }
 }
 
 /* COLORS */
@@ -20,6 +29,8 @@
     --body-bg-color: #FCF6FC;
 
     --primary-text-color: #055647;
+    --btn-color:#B93857;
+
 
 
 /* Skapat variabel för font-family */ 
@@ -27,6 +38,8 @@
 --primary-font-fam: "Maven Pro";  
 
 --secondary-font-fam: "Open Sans"; 
+
+--title-card-font-fam: "Lato";
 
 }
 
@@ -38,6 +51,7 @@ body {
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* HEADER SECTION */
@@ -90,8 +104,22 @@ body {
     align-items: center;  
 }
 
-.navigation-list {
+/* NAV SECTION */
+li {
     padding: 1rem 0;
+    width:250px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: var(--primary-bg-color);
+    
+    a {
+        color: white;
+    }
+}
+
+.navigation-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -102,11 +130,17 @@ body {
     font-weight: 500;
     box-shadow: 4 4 4 1;
     background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.navigation {
+    position: relative;
+    z-index: 1;
 }
 
 /* MAIN SECTION */
 main {
-    padding: 2rem 2rem;
+    padding: 2.25rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,21 +216,110 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
+
+    h2 {
+        font-family: var(--title-card-font-fam);
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    button {
+        font-family: var(--secondary-font-fam);
+        font-weight: 600;
+        font-size: 1.5rem;
+        width: 17%;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .gallery-card-section {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
+    column-gap: 1.7rem;
     row-gap: 1.5rem;
 }
 
 .seed-cards {
     grid-column: span 1;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.2);
+
 }
 
+.card-image {
+    max-width: 100%;
+    height: 18.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-gurka {
+    background-image: url("https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-tomat-big {
+    background-image: url("https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-tomat-small {
+    background-image: url("https://images.unsplash.com/photo-1565698228480-eec300c9679b?q=80&w=2806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-peas {
+    background-image: url("https://images.unsplash.com/photo-1687878269804-63e8b50e3ddc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-majrova {
+    background-image: url("https://images.unsplash.com/photo-1555447740-03e40562af94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-squash {
+    background-image: url("https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+    padding: 1.3rem 1rem;
+
+    h2 {
+        font-family: var(--title-card-font-fam);
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-family: var(--secondary-font-fam);
+        font-weight: 700;
+        font-size: 1rem;
+        justify-self: end;
+    }
+
+    p {
+        font-family: var(--title-card-font-fam);
+        font-weight: 300;
+        font-size: 1rem;
+        margin-top: .4rem;
+    }
+
+    button {
+        height: 2rem;
+        width: 80%;
+        background-color: var(--btn-color);
+        font-size: 1rem;
+        justify-self: end;
+    }
+
+}
 
 
 /* PLANTERADE PLANTOR SECTION */
@@ -247,8 +370,104 @@ hr {
 }
 
 
+/* FOOTER */
+.planer-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 
-/* PROFILE PAGE */
+    h2 {
+        margin: 1.5rem;
+        text-align: center;
+        font-family: var(--secondary-font-fam);
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+}
+
+
+.contact-section {
+    background-image: url("https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    max-width: 100%;
+
+    /* SKA VI HA EN ANGIVEN HÖJD PÅ DENNA? */
+    height: 37rem;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-contact {
+    flex: 1;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-footer-contact {
+    position: absolute;
+    align-self: center;
+    margin-top: 50%;
+    /* transform: translateX(135px); */
+    font-family: var(--primary-font-fam);
+    font-weight: 500;
+    font-size: 4rem;
+    z-index: 3;
+}
+
+.contact-info {
+    /* position: absolute; */
+    width: 100%;
+    z-index: 4;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    padding:0 1.5rem 2rem 1.5rem;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: var(--primary-font-fam);
+}
+
+.mail {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background-opacity {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .7;
+    z-index: 1;
+    position: absolute;
+}
+
+.footer-heart {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 13%;
+}
+
+
+/* MINA SIDOR PAGE */
 
 .wrapper-profile { 
 
@@ -262,37 +481,9 @@ hr {
     
     /* Menu är en kopia kod från index sida */ 
     
-    .navigation-list { 
-    
-    padding: 1rem 0; 
-    
-    display: flex; 
-    
-    flex-direction: row; 
-    
-    justify-content: space-around; 
-    
-    list-style-type: none; 
-    
-    font-family: "Maven pro"; 
-    
-    font-size: 1.25rem; 
-    
-    color: var(--primary-text-color); 
-    
-    font-weight: 500; 
-    
-    box-shadow: 4 4 4 1; 
-    
-    background-color: #fff; 
-    
-    position: sticky; 
-    
-    } 
-    
     .profile-header { 
     
-    background-image: url(assets/images.jpg); 
+    background-image: url(../assets/reaching.png); 
     
     max-width: 100%; 
     
@@ -335,16 +526,18 @@ hr {
     } 
     
     } 
+
+    /* ADD PLANT SECTION */
     
     .add-plant { 
     
-    display: grid; 
-    
+    display: flex; 
+    flex-direction: column;
     gap: 2rem; 
     
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     
-    grid-auto-rows: auto; 
+    grid-auto-rows: auto;  */
     
     padding: 3rem 2rem; 
     
@@ -367,12 +560,28 @@ hr {
     color: #000000; 
     
     } 
+
+    .add-plant-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .input-planta, .input-datum {
+        width: 100%;
+        background-color: #055647;
+    }
+
+    .input-planta-box {
+        width: 300px;
+        background-color: #055647;
+    }
     
-    input { 
+    /* input { 
     
     grid-row: 2; 
     
-    } 
+    }  */
     
     #planta, #datum { 
     
@@ -544,7 +753,7 @@ hr {
     
     } 
     
-    footer { 
+    .plant-page-footer { 
     
     width: 100%; 
     

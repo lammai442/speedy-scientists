@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speedy scientists</title>
+    <title>Planned planthood</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- ICON LINK -->
+    <script src="https://kit.fontawesome.com/25e208ea15.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -23,10 +26,10 @@
         </header>
         <nav class="navigation">
             <ul class="navigation-list">
-                <li><a href="profile.html">Planer</a></li>
+                <li><a href="">PLANER</a></li>
                 <li><a href="">HISTORIK</a></li>
                 <li><a href="">TIPS</a></li>
-                <li><a href="">LOGGA IN</a></li>
+                <li><a href="mina-sidor.html">LOGGA IN</a></li>
             </ul>
         </nav>
 
@@ -52,62 +55,78 @@
                 <h2 class="title-plant-gallery-section">Våra planerade planteringar:</h2>
                 <section class="gallery-card-section">
 
-                    <article class="seed-cards">
-                        <figure>
+                    <article class="card-gurka seed-cards">
+                        <figure class="card-image card-image-gurka">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
-                        <h2>Gurka</h2>
-                        <h3>15 april 2024</h3>
-                        <p>Rico Coolio</p>
-                        <button>TA BORT</button>
+                        <section class="card-info">
+                            <h2>Gurka</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Rico Coolio</p>
+                            <button>TA BORT</button>
+                        </section>
                     </article>
-                    <article class="seed-cards">
-                <figure>
-                    <img src="assets/plant.svg" alt="Image of a plant">
-                </figure>
-                <h2>Tomat</h2>
-                <h3>1 april 2024</h3>
-                <p>Jocke</p>
-                <button>TA BORT</button>
-            </article>
-              <article class="seed-cards">
-                  <figure>
-                    <img src="assets/plant.svg" alt="Image of a plant">
-                </figure>
-                <h2>Tomat</h2>
-                <h3>1 april 2024</h3>
-                <p>Majvor och P-Å</p>
-                <button>TA BORT</button>
-              </article>
-              <article class="seed-cards">
-                  <figure>
-                    <img src="assets/plant.svg" alt="Image of a plant">
-                </figure>
-                <h2>Sockerärtor</h2>
-                <h3>15 april 2024</h3>
-                <p>Frippe</p>
-                <button>TA BORT</button>
-            </article>
-              <article class="seed-cards">
-                <figure>
-                    <img src="assets/plant.svg" alt="Image of a plant">
-                </figure>
-                <h2>Majrova</h2>
-                <h3>1 april 2024</h3>
-                <p>Emma på 4an</p>
-                <button>TA BORT</button>
-            </article>
-            <article class="seed-cards">
-                <figure>
-                    <img src="assets/plant.svg" alt="Image of a plant">
-                </figure>
-                <h2>Squash</h2>
-                <h3>15 april 2024</h3>
-                <p>Perra J</p>
-                <button>TA BORT</button>
-              </article>
-            </section>
+
+                    <article class="card-tomat-big seed-cards">
+                        <figure class="card-image card-image-tomat-big">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Tomat</h2>
+                            <h3>1 april 2024</h3>
+                            <p>Jocke</p>
+                            <button>TA BORT</button>
+                        </section>
+                    </article>
+
+                    <article class="card-tomat-small seed-cards">
+                        <figure class="card-image card-image-tomat-small">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Tomat</h2>
+                            <h3>1 april 2024</h3>
+                            <p>Majvor och P-Å</p>
+                            <button>TA BORT</button>
+                        </section>
+                    </article>
               
+                    <article class="card-peas seed-cards">
+                        <figure class="card-image card-image-peas">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Sockerärtor</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Frippe</p>
+                            <button>TA BORT</button>
+                        </section>  
+                    </article>
+
+                    <article class="card-majrova seed-cards">
+                        <figure class="card-image card-image-majrova">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Majrova</h2>
+                            <h3>1 april 2024</h3>
+                            <p>Emma på 4an</p>
+                            <button>TA BORT</button>
+                        </section>
+                    </article>
+
+                    <article class="card-squash seed-cards">
+                        <figure class="card-image card-image-squash">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Squash</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Perra J</p>
+                            <button>TA BORT</button>
+                        </section>
+                    </article>
+                    </section>
               
               <button>Visa fler</button>
             </section>
@@ -136,8 +155,32 @@
         </main>
 
         <!-- FOOTER -->
-         <footer>
+         <footer class="planer-footer">
+            <section class="contact-section">
+                <article class="footer-contact">
+                    <h1 class="title-footer-contact">Vi hörs!</h1>
+                    <aside class="contact-info">
+                        <figure class="contact-items phone-number">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" viewBox="0 0 512 512"><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                            <h3>0701-234567</h3>
+                        </figure>
+                        <figure class="contact-items mail">
+                            <h3>mail@mail.se</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" viewBox="0 0 512 512"><path fill="#ffffff" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
+                        </figure>
+                    </aside>
+                    <figure class="background-opacity"></figure>
+                                
+                       
+                    
+                </article>
 
+                
+                <article class="footer-heart">
+                    <img class="heart" src="assets/plannedplanthoodlogo.svg" alt="Image of a heart">
+                </article>
+            </section>
+            <h2 class="scroll-to-top">Till toppen av sidan</h2>
          </footer>
     </div>
 </body>
