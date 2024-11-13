@@ -70,6 +70,7 @@ body {
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -169,6 +170,10 @@ main {
     background-color: var(--primary-bg-color);
     border-radius: 50%;
     aspect-ratio: 1;
+}
+
+.tips-section-img-icon {
+    width: 60%;
 }
 
 .season-article {
@@ -391,7 +396,7 @@ hr {
     max-width: 100%;
 
     /* SKA VI HA EN ANGIVEN HÖJD PÅ DENNA? */
-    height: 37rem;
+    aspect-ratio: 2/1;
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -565,16 +570,16 @@ hr {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: #055647;
     }
 
     .input-planta, .input-datum {
-        width: 100%;
-        background-color: #055647;
+        padding: 1rem;
+        flex: 1;
     }
 
     .input-planta-box {
-        width: 300px;
-        background-color: #055647;
+        width: 100%;
     }
     
     /* input { 
