@@ -576,7 +576,7 @@ hr {
     
         font-family: var(--secondary-font-fam); 
         
-        font-size: 36px; 
+        font-size: 2rem; 
         
         font-weight: 400; 
         
@@ -628,10 +628,7 @@ hr {
     font-size: 1.5rem;
     font-weight: 700;
     } 
-    
 
-
-    
     
     /* PLANT GALLERY - MINA SIDOR */
 
@@ -949,6 +946,7 @@ hr {
 
 .profile-header {
     aspect-ratio: 1;
+    background-image: url(../assets/reaching-full-size.jpg);
  
     .hamburger-menu-mina-sidor {
         display: block;
@@ -958,5 +956,52 @@ hr {
         height: 2.5rem;
         width: 2.5rem;
     }
+
+    h2 {
+        margin-top: 2rem;
+    }
 }
-}
+
+    /* MAIN SECTION - MINA SIDOR */
+    .mina-sidor-main {
+        padding: 1rem;
+    }
+
+    /* ADD PLANT SECTION */
+    .title-add-plant {
+        text-align: center;
+    }
+
+    .add-plant-inputs {
+        flex-direction: column;
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: .5rem 1.5rem;
+    }
+
+    /* PLANT GALLERY SECTION - MINA SIDOR */
+    .plant-gallery-mina-sidor {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .head-title-gallery-mina-sidor, .sub-title-gallery-mina-sidor{
+            font-size: 1rem;
+        }
+    }
+
+    .footer-gallery-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .to-top-mina-sidor {
+        font-size: .9rem;
+        padding: 1rem 0;
+    }
+}   
+
