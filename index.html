@@ -16,6 +16,9 @@
             <figure class="hero-big-img">
                 <figure class="hero-big-img-background"></figure>
                 <img src="assets/plannedplanthoodlogo.svg" alt="Hand holding grass roots" class="hero-big-img-heart">
+                <figure class="hamburger-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </figure>
             </figure>
             <figure class="hero-small-brown">
                 <img src="assets/seedling.svg" alt="Image of a seedling icon" class="hero-small-brown-img">
@@ -34,12 +37,14 @@
         </nav>
 
         <!-- MAIN SECTION -->
-        <main>
+        <main class="planer-main">
             <h1 class="main-title">PLANNED PLANTHOOD</h1>
-            <section class="planned-tips-section">
-                <figure class="tips-section-img">
-                    <img src="assets/seedpackage.svg" alt="Image of a seed package" class="section-img-icon">
-                </figure>
+            <section class="info-text-section">
+                <article class="season-circle">
+                    <figure class="circle-section-img">
+                        <img src="assets/seedpackage.svg" alt="Image of a seed package" class="planned-section-img-icon">
+                    </figure>
+                </article>
                 <article class="season-article">
                     <h2>Säsong att så</h2>
                     <p>Våren är äntligen här i kollektivet! <br> 
@@ -55,7 +60,7 @@
                 <h2 class="title-plant-gallery-section">Våra planerade planteringar:</h2>
                 <section class="gallery-card-section">
 
-                    <article class="card-gurka seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-gurka">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
@@ -64,10 +69,11 @@
                             <h3>15 april 2024</h3>
                             <p>Rico Coolio</p>
                             <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn">
                         </section>
                     </article>
 
-                    <article class="card-tomat-big seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-tomat-big">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
@@ -75,11 +81,12 @@
                             <h2>Tomat</h2>
                             <h3>1 april 2024</h3>
                             <p>Jocke</p>
-                            <button>TA BORT</button> 
+                            <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn"> 
                         </section>
                     </article>
 
-                    <article class="card-tomat-small seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-tomat-small">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
@@ -88,22 +95,24 @@
                             <h3>1 april 2024</h3>
                             <p>Majvor och P-Å</p>
                             <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn">
                         </section>
                     </article>
               
-                    <article class="card-peas seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-peas">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
                         <section class="card-info">
-                            <h2>Sockerärtor</h2>
+                            <h2>Gurka</h2>
                             <h3>15 april 2024</h3>
                             <p>Frippe</p>
                             <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn">
                         </section>  
                     </article>
 
-                    <article class="card-majrova seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-majrova">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
@@ -112,10 +121,11 @@
                             <h3>1 april 2024</h3>
                             <p>Emma på 4an</p>
                             <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn">
                         </section>
                     </article>
 
-                    <article class="card-squash seed-cards">
+                    <article class="seed-cards">
                         <figure class="card-image card-image-squash">
                             <img src="assets/plant.svg" alt="Image of a plant">
                         </figure>
@@ -124,33 +134,28 @@
                             <h3>15 april 2024</h3>
                             <p>Perra J</p>
                             <button>TA BORT</button>
+                            <img src="assets/bin.png" alt="Image of a bin" class="bin-btn">
                         </section>
                     </article>
                     </section>
               
-                    <button>VISA FLER</button> <!--Changed to capital letter here-->
-            </section>
-
-
-
-
-
-
-
-              
+                    <button class="gallery-show-more-btn">VISA FLER</button>
+            </section>              
                 
 
             <!-- PLANTERADE PLANTOR SECTION -->
-            <section class="planterade-plantor-section">
-                <article class="planterade-plantor-article">
+            <section class="info-text-section">
+                <article class="season-article planterade-season-article ">
                     <h2>Våra tidigare odlingar</h2>
                     <p>Våren är äntligen här i kollektivet! <br> 
                         Lorem ipsum dolor sit amet consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet netus amet eu elit.</p>
                     <button class="planterade-plantor-btn">Planterade plantor</button>
                 </article>
-                <figure class="planterade-plantor-img">
-                    <img src="assets/plant.svg" alt="Image of a plant" class="section-img-icon">
-                </figure>
+                <article class="season-circle planterade-season-img">
+                    <figure class="circle-section-img planterade-section-img">
+                        <img src="assets/plant.svg" alt="Image of a plant" class="section-img-icon">
+                    </figure>
+                </article>
             </section>
         </main>
 
@@ -182,6 +187,7 @@
             </section>
             <a href="#top"><h2 class="scroll-to-top">Till toppen av sidan</h2></a>
          </footer>
+         
     </div>
 </body>
 </body>

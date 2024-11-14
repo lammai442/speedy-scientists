@@ -76,6 +76,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    .hamburger-menu {
+        display: none;
+    }
 }
 
 .hero-big-img-heart {
@@ -141,7 +145,7 @@ li:hover {
 }
 
 /* MAIN SECTION */
-main {
+.planer-main {
     padding: 2.25rem 2rem;
     display: flex;
     flex-direction: column;
@@ -158,13 +162,18 @@ main {
 }
 
 /* PLANNED TIPS SECTION */
-.planned-tips-section {
+.info-text-section {
     display: flex;
     flex-direction: row;
 }
 
-.tips-section-img {
-    flex: 4;
+.season-circle {
+    flex: 1;
+    padding: 3rem 0rem 2rem 0rem;
+}
+
+.circle-section-img {
+    width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,15 +182,15 @@ main {
     aspect-ratio: 1;
 }
 
-.section-img-icon {
-    width: 60%;
+.planned-section-img-icon {
+    aspect-ratio: 1;
 }
 
 .season-article {
-    flex: 6;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 5rem 0 5rem 3rem;
+    margin-top: 20%;
     gap: 1.5rem;
     font-family: "Open sans";
 
@@ -230,11 +239,16 @@ hr {
         font-size: 2rem;
     }
 
-    button {
+    .gallery-show-more-btn {
+        padding: .8rem 1.5rem;
         font-family: var(--secondary-font-fam);
         font-weight: 600;
         font-size: 1.5rem;
-        width: 17%;
+        width: fit-content;
+        background-color: var(--primary-bg-color);
+        color: white;
+        border-radius: 9px;
+        border: none;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
     }
 }
@@ -256,8 +270,9 @@ hr {
 }
 
 .card-image {
-    max-width: 100%;
-    height: 18.5rem;
+    /* max-width: 100%;
+    height: 18.5rem; */
+    aspect-ratio: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -265,6 +280,10 @@ hr {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    img {
+        aspect-ratio: 1;
+    }
 }
 
 .card-image-gurka {
@@ -314,12 +333,13 @@ hr {
         font-family: var(--title-card-font-fam);
         font-weight: 300;
         font-size: 1rem;
-        margin-top: .4rem;
+        align-self: center;
     }
 
     button {
         height: 2rem;
-        width: 80%;
+        width: fit-content;
+        padding: 0 1rem;
         background-color: var(--btn-color);
         font-size: 1rem;
         font-weight: 700;
@@ -330,20 +350,22 @@ hr {
         border: none;
     }
 
+    .bin-btn {
+        display: none;
+    }
 }
 
 
 /* PLANTERADE PLANTOR SECTION */
-.planterade-plantor-section {
+/* .planterade-plantor-section {
     display: flex;
     flex-direction: row;
-}
+} */
 
-.planterade-plantor-article {
-    flex: 6;
+.planterade-season-article {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 5rem 0;
     gap: 1.5rem;
     font-family: "Open sans";
 
@@ -352,7 +374,7 @@ hr {
         font-weight: 700;
     }
 
-    .planterade-plantor-article p {
+    p {
         font-size: 1rem;
         font-weight: 400;
     }
@@ -360,7 +382,7 @@ hr {
     .planterade-plantor-btn {
         border: none;
         align-self: flex-start;
-        width: 50%;
+        width: fit-content;
         padding: 1rem 2rem;
         background-color: var(--primary-bg-color);
         color: white;
@@ -370,15 +392,10 @@ hr {
     }
 }
 
-.planterade-plantor-img {
-    flex: 4;
+.planterade-season-img {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-bg-color);
-    border-radius: 50%;
-    aspect-ratio: 1;
-}
+    justify-content: flex-end;
+} 
 
 
 /* FOOTER */
@@ -480,7 +497,7 @@ hr {
 
 /* MINA SIDOR PAGE */
 
-.wrapper-profile { 
+.wrapper-mina-sidor { 
 
     max-width: 1000px; 
     margin: 0 auto;
@@ -498,10 +515,7 @@ hr {
     .profile-header { 
     
     background-image: url(../assets/reaching.png); 
-    
-    max-width: 100%; 
-    
-    height: 379px; 
+    aspect-ratio: 5/2;
     
     background-size: cover; 
     
@@ -516,6 +530,10 @@ hr {
     align-items: center; 
     
     justify-content: center;
+
+    .hamburger-menu-mina-sidor {
+        display: none;
+    }
    
      
     
@@ -707,10 +725,20 @@ hr {
         background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
     }
 
+    .to-top-mina-sidor {
+        padding: 2rem 0;
+        text-align: center;
+        font-family: var(--secondary-font-fam);
+        font-size: 1.5rem;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
     
 /* ADAPTING TO MOBILE AND SMALLER DEVICES */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
+    /* LANDING PAGE - PLANER */
     /* HEADER START HERE */
     .wrapper {
         width: 100%;
@@ -719,10 +747,12 @@ hr {
     .hero {
         width: 100%;
         height: fit-content;
+        position: relative;
 
         .hero-big-img {
             grid-column: 1 / 3;
             height: 390px;
+           
         }
         .hero-small-brown {
             grid-column: 1;
@@ -736,16 +766,26 @@ hr {
         } 
 
         img {
-            width: 50%;
+            width: 80%;
             height: auto;
         }
+        
+        .hamburger-menu {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: block;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
         .hero-small-brown, .hero-small-green {
             width: 100%;
             height: 195px;
             
         }
     }
-    
+
     .navigation {
         display: none;
     }
@@ -757,16 +797,24 @@ hr {
     }
 
     /* TWO SECTION CLASSES HAVE THE SAME LAYOUT FOR DESKTOP, SO THEY CAN EVEN SHARE THE SAME CSS LAYOUT FOR MOBILE AS WELL*/
-    .planned-tips-section, .planterade-plantor-section {
+    .planer-main { 
+        padding: 2.25rem 1rem;
+        gap: 1rem;
+    }
+
+    .info-text-section {
         flex-direction: column-reverse;
 
         .season-article, .planterade-plantor-article {
-            padding: 2rem 0 2rem 0;
+            padding: 0rem 0 2rem 0;
             text-align: center;
+            margin-top: 0;
         }
+
         h2 {
-            font-size: 16px;
+            font-size: 1rem;
         }
+
         p {
             font-size: 14px;
         }
@@ -776,37 +824,139 @@ hr {
             align-self: center;
             width: fit-content;
         }
+
+        .season-circle {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .planned-section-img-icon {
+            aspect-ratio: 8/7;
+        }
+    }
+
+    hr {
+        border: 3px solid var(--primary-text-color);
+        width: 50%;
     }
 
     /* PLANT GALLERY SECTION CSS START HERE */
     .plant-gallery-section {
-        h2 {
-            font-size: 16px;
-        }
+        gap: 2rem;
 
+        h2 {
+            font-size: 1rem;
+        }
     }
     .gallery-card-section {
-        grid-template-columns: repeat (2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
 
         img {
-            width: 50%;
-            height: auto;
+            aspect-ratio: 6/4;
+        }      
+    }
+
+    .card-info {
+        padding: .5rem 0.2rem;
+        gap: .5rem;
+
+        button {
+            display: none;
         }
+
         h2 {
-            font-size: 14px;
+            font-size: .9rem;
         }
-        h3, p {
-            font-size: 10px;
+
+        h3 {
+            font-size: .8rem;
+        }
+
+        p {
+            font-size: .7rem;
+        }
+
+        .bin-btn {
+            display: block;
+            width: 22%;
+            height: 100%;
+            justify-self: end;
+            align-self: center;
+            margin-right: .3rem; 
         }
     }
+
+    .plant-gallery-section {
+        .gallery-show-more-btn {
+            font-size: 1rem;
+        }
+    }
+
+    /* PLANTERADE PLANTOR SECTION */
+    .planterade-section-img {
+        width: 70%;
+        margin: 2rem 0;
+        }
+        img {
+            aspect-ratio: 9/8;
+        }
+
+    .planterade-season-article {
+        .planterade-plantor-btn {
+            padding: .8rem 1rem;
+            font-weight: 700;
+        }
+    }
+
     
     /* FOOTER START FROM HERE */
 
     .contact-section {
-        width: 100%;
         flex-direction: column-reverse;
         aspect-ratio: 1 / 2;
     }
 
+    .title-footer-contact {
+        font-size: 2rem;
+        margin-top: 45%;
+        font-weight: 500;
+    }
+
+    .contact-info {
+        h3 {
+            font-size: .75rem;
+            align-self: center;
+        }
+    }
+
+    .planer-footer {
+        h2 {
+            font-size: .75rem;
+            font-weight: 400;
+            color: black;
+        }
+    }
+
     /* FOOTER END HERE */
+/* PAGE - MINA SIDOR */
+
+.navigation-mina-sidor {
+    display: none;
+}
+
+.profile-header {
+    aspect-ratio: 1;
+ 
+    .hamburger-menu-mina-sidor {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
 }
